@@ -4,7 +4,7 @@ from re import search
 import requests
 from bs4 import BeautifulSoup
 import config
-import progresbar
+import progressbar
 
 baseurl = sys.argv[1]
 '''
@@ -31,11 +31,7 @@ for i in grades:
 	
 	
 	if str(i) == "]":
-		flag = 0
-
-
-
-	   
+		flag = 0   
 
 def GetHTML(url):
 	r = requests.get(url)
