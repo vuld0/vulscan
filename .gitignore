@@ -1,4 +1,4 @@
 # ignores built version
-web-crawler
+vulscan
 # ignores emacs backup files
 .\#*.go
