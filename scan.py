@@ -7,10 +7,10 @@ import config
 import progressbar
 
 baseurl = sys.argv[1]
-'''
+
 str1 = "./vulscan -u '%s'>output.txt" % (baseurl)
 os.system(str1)
-'''
+
 
 #reading the contents from the web crawler file
 
