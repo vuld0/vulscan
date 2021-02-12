@@ -23,5 +23,9 @@ build:
 crawl and scan:
 
 ```bash
-  python3 <link>
+  python3 scan.py <link>
 ```
+
+## Output
+
+![](result.png)
