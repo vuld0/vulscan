@@ -11,7 +11,6 @@
 	 	[index.php]
 	 	[categories.php]
 	 	[artists.php]
-	 	[disclaimer.php]
 	 	[cart.php]
 	 	[guestbook.php]
 	 	[AJAX/index.php]
@@ -31,6 +30,7 @@
 	 	[mailto:wvs@acunetix.com]
 	 	[http://testphp.vulnweb.com/Mod_Rewrite_Shop/]
 	 	[http://testphp.vulnweb.com/hpp/]
+		[http://testphp.vulnweb.com/artists.php?artist=4]
 	]
 
 [http://testphp.vulnweb.com/Mod_Rewrite_Shop/] 
