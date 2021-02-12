@@ -2,3 +2,4 @@
 vulscan
 # ignores emacs backup files
 .\#*.go
+output.txt
