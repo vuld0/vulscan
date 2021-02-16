@@ -5,6 +5,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 from urllib.parse import urljoin
 from pprint import pprint
+from termcolor import colored
 
 #Initializing an HTTP session & setting the browser
 
@@ -76,7 +77,7 @@ def scanSQLi(url):
 		if is_vulnerable(res):
 			# SQL Injection detected on the URL
 			# Add the Caution below 
-			print("SQL Injection Detected",newurl)
+			print(colored('SQL Injection vulnerability detected ', 'red'), colored(url, 'green'))
 			return
 
 	forms = get_all_forms(url)
@@ -100,6 +101,7 @@ def scanSQLi(url):
 				res = s.get(url,params=data)
 
 			if is_vulnerable(res):
+				print(colored('SQL Injection vulnerability detected ', 'red'), colored(url, 'green'))
 				print("SQL Injection vulnerability detected, link:", url)
 				pprint(form_details)
 				break
@@ -135,15 +137,15 @@ def scanXSS(url):
 		form_details = get_form_details(form)
 		content = submit_form(form_details, url, xsspayload).content.decode()
 		if xsspayload in content:
-			print(f"[+] XSS Detected on {url}")
+			print(colored('XSS vulnerability detected ', 'red'), colored(url, 'green'))
 			print(f"[*] Form details:")
 			pprint(form_details)
 
 if __name__ == "__main__":
 	baseurl = sys.argv[1]
 
-	# str1 = "./vulscan -u '%s'>output.txt" % (baseurl)
-	# os.system(str1)
+	str1 = "./vulscan -u '%s'>output.txt" % (baseurl)
+	os.system(str1)
 
 
 	#reading the contents from the web crawler file
